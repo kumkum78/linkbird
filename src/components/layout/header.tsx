@@ -6,6 +6,7 @@ import { useUIStore } from "@/lib/stores/ui-store"
 import { useAuthStore } from "@/lib/stores/auth-store"
 import { Menu, Bell, User, LogOut } from "lucide-react"
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 const pathLabels: Record<string, string> = {
   "/dashboard": "Dashboard",
@@ -76,9 +77,11 @@ export function Header() {
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
               {user?.image ? (
-                <img
+                <Image
                   src={user.image}
                   alt={user.name}
+                  width={32}
+                  height={32}
                   className="w-8 h-8 rounded-full"
                 />
               ) : (

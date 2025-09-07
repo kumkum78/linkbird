@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { useUIStore } from "@/lib/stores/ui-store"
@@ -111,9 +112,11 @@ export function Sidebar() {
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
                 {user?.image ? (
-                  <img
+                  <Image
                     src={user.image}
                     alt={user.name}
+                    width={32}
+                    height={32}
                     className="w-8 h-8 rounded-full"
                   />
                 ) : (

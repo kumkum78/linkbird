@@ -101,7 +101,7 @@ export function CampaignSideSheet() {
   }
 
   const handleCancel = () => {
-    setEditedCampaign(campaign)
+    setEditedCampaign(campaign || null)
     setIsEditing(false)
   }
 

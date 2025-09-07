@@ -93,7 +93,7 @@ export function LeadSideSheet() {
   }
 
   const handleCancel = () => {
-    setEditedLead(lead)
+    setEditedLead(lead || null)
     setIsEditing(false)
   }
 

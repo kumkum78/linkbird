@@ -95,8 +95,8 @@ export async function getCampaignById(id: string) {
 export async function createCampaign(data: {
   name: string
   description?: string
-  status?: string
-  type: string
+  status?: "draft" | "active" | "paused" | "completed"
+  type: "email" | "social" | "content" | "paid" | "event"
   budget?: number
   startDate?: Date
   endDate?: Date

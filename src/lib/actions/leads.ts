@@ -125,7 +125,7 @@ export async function updateLead(id: string, data: Partial<{
   email: string
   phone: string
   company: string
-  status: string
+  status: "new" | "contacted" | "responded" | "converted"
   source: string
   value: number
   notes: string

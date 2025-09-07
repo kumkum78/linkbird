@@ -39,8 +39,12 @@ export const auth = betterAuth({
       },
     },
   },
-  trustedOrigins: ["http://localhost:3000"],
-  baseURL: "http://localhost:3000",
+  trustedOrigins: [
+    "http://localhost:3000",
+    "https://linkbird.vercel.app",
+    "https://*.vercel.app"
+  ],
+  baseURL: process.env.BETTER_AUTH_URL || "http://localhost:3000",
   secret: process.env.BETTER_AUTH_SECRET || "fallback-secret-key",
 })
 
